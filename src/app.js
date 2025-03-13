@@ -28,7 +28,7 @@ const server = app.listen(PORT, () => {
 }); 
 
 // Connect to MongoDB
-mongoose.connect("mongodb+srv://garrisonsayor:garrison123@cluster0.xhk0s.mongodb.net", {
+mongoose.connect(process.env.MONGO_URI, {
 }).then(() => console.log('MongoDB connected'))
   .catch(err => console.error(err));
 
